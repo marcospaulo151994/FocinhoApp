@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--
+        android:name aponta para a nossa classe Application (FocinhoApplication),
+        que guarda o banco e os repositórios compartilhados.
+    -->
     <application
+        android:name=".FocinhoApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,8 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FocinhoApp">
+
+        <!-- Tela inicial (LAUNCHER): login -->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -21,6 +28,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.login.CadastroUsuarioActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.login.LoginActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.home.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.pets.PetFormActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.home.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
