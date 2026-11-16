@@ -1,8 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Tema claro do app (Material 3). As cores são usadas por todos os componentes. -->
     <style name="Base.Theme.FocinhoApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/focinho_primaria</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/focinho_primaria_container</item>
+        <item name="colorOnPrimaryContainer">@color/focinho_on_primaria_container</item>
+        <item name="colorSecondary">@color/focinho_secundaria</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/focinho_secundaria_container</item>
+        <item name="colorOnSecondaryContainer">@color/focinho_on_secundaria_container</item>
+        <item name="android:colorBackground">@color/focinho_fundo</item>
+        <item name="colorSurface">@color/focinho_fundo</item>
+        <!-- Todos os campos de texto usam o estilo com contorno -->
+        <item name="textInputStyle">@style/Widget.Material3.TextInputLayout.OutlinedBox</item>
     </style>
 
     <style name="Theme.FocinhoApp" parent="Base.Theme.FocinhoApp" />

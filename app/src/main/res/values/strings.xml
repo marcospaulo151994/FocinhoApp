@@ -1,3 +1,88 @@
 <resources>
-    <string name="app_name">FocinhoApp</string>
+    <string name="app_name">Focinho</string>
+
+    <!-- Geral -->
+    <string name="emoji_logo">🐾</string>
+    <string name="emoji_vazio">🐶</string>
+    <string name="slogan">Tudo sobre a saúde do seu pet, num só lugar.</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="excluir">Excluir</string>
+    <string name="salvar">Salvar</string>
+    <string name="limpar">Limpar</string>
+    <string name="sair">Sair</string>
+
+    <!-- Login e cadastro -->
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="hint_nome">Seu nome</string>
+    <string name="hint_confirmar_senha">Confirmar senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="criar_conta">Ainda não tem conta? Cadastre-se</string>
+    <string name="titulo_cadastro">Criar conta</string>
+    <string name="intro_cadastro">Crie sua conta para começar a cuidar dos seus pets.</string>
+    <string name="helper_senha">Mínimo de %1$d caracteres</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="erro_email_invalido">Informe um e-mail válido</string>
+    <string name="erro_senha_vazia">Informe a senha</string>
+    <string name="erro_senha_curta">A senha deve ter pelo menos %1$d caracteres</string>
+    <string name="erro_senhas_diferentes">As senhas não conferem</string>
+    <string name="erro_nome_usuario">Informe seu nome</string>
+    <string name="erro_email_nao_encontrado">Nenhuma conta com este e-mail</string>
+    <string name="erro_senha_incorreta">Senha incorreta</string>
+    <string name="erro_email_ja_cadastrado">Este e-mail já está cadastrado</string>
+    <string name="msg_conta_criada">Conta criada! Bem-vindo(a), %1$s</string>
+
+    <!-- Lista de pets -->
+    <string name="titulo_meus_pets">Meus pets</string>
+    <string name="ola_usuario">Olá, %1$s</string>
+    <string name="novo_pet">Novo pet</string>
+    <string name="vazio_titulo">Nenhum pet por aqui ainda</string>
+    <string name="vazio_mensagem">Toque em \"Novo pet\" para cadastrar o primeiro.</string>
+    <string name="titulo_sair">Sair da conta?</string>
+    <string name="msg_sair">Você vai precisar entrar de novo para ver seus pets.</string>
+
+    <!-- Formulário de pet -->
+    <string name="titulo_novo_pet">Novo pet</string>
+    <string name="titulo_editar_pet">Editar pet</string>
+    <string name="hint_nome_pet">Nome do pet</string>
+    <string name="hint_especie">Espécie</string>
+    <string name="hint_raca">Raça (opcional)</string>
+    <string name="rotulo_sexo">Sexo</string>
+    <string name="hint_nascimento">Data de nascimento (opcional)</string>
+    <string name="hint_peso">Peso (opcional)</string>
+    <string name="sufixo_kg">kg</string>
+    <string name="hint_observacoes">Observações (opcional)</string>
+    <string name="erro_nome_pet">Informe o nome do pet (mínimo 2 letras)</string>
+    <string name="erro_especie">Selecione a espécie</string>
+    <string name="erro_sexo">Selecione o sexo</string>
+    <string name="erro_data_futura">A data não pode estar no futuro</string>
+    <string name="erro_peso">Informe um peso maior que 0 e até %1$d kg</string>
+    <string name="erro_pet_nao_encontrado">Pet não encontrado</string>
+    <string name="msg_pet_salvo">%1$s salvo com sucesso</string>
+    <string name="msg_pet_excluido">%1$s foi removido</string>
+    <string name="titulo_excluir_pet">Excluir pet?</string>
+    <string name="msg_excluir_pet">Todos os registros de %1$s (vacinas, vermífugos e consultas) também serão apagados. Essa ação não pode ser desfeita.</string>
+
+    <!-- Domínio: espécie e sexo -->
+    <string name="especie_cao">Cão</string>
+    <string name="especie_gato">Gato</string>
+    <string name="especie_outro">Outro</string>
+    <string name="sexo_macho">Macho</string>
+    <string name="sexo_femea">Fêmea</string>
+
+    <!-- Domínio: tipos de cuidado (usados a partir da etapa 2) -->
+    <string name="tipo_vacina">Vacinas</string>
+    <string name="tipo_vermifugo">Vermífugos</string>
+    <string name="tipo_consulta">Consultas</string>
+    <string name="rotulo_nome_vacina">Nome da vacina</string>
+    <string name="rotulo_produto">Produto</string>
+    <string name="rotulo_motivo">Motivo da consulta</string>
+    <string name="rotulo_data_aplicacao">Data de aplicação</string>
+    <string name="rotulo_data_consulta">Data da consulta</string>
+    <string name="rotulo_proxima_dose">Próxima dose</string>
+    <string name="rotulo_proxima_aplicacao">Próxima aplicação</string>
+    <string name="rotulo_retorno">Retorno</string>
+    <string name="rotulo_lote">Lote</string>
+    <string name="rotulo_dose">Dose</string>
+    <string name="rotulo_diagnostico">Diagnóstico</string>
 </resources>
