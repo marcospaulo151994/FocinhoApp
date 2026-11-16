@@ -2,4 +2,24 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta do Focinho: terracota (primária) + verde-azulado (secundária) -->
+    <color name="focinho_primaria">#B5533C</color>
+    <color name="focinho_primaria_container">#FFDBD1</color>
+    <color name="focinho_on_primaria_container">#3B0A00</color>
+    <color name="focinho_secundaria">#2F7A6B</color>
+    <color name="focinho_secundaria_container">#B7EFDF</color>
+    <color name="focinho_on_secundaria_container">#00201A</color>
+    <color name="focinho_fundo">#FFF8F5</color>
+
+    <!-- Versões para o tema escuro -->
+    <color name="focinho_primaria_escuro">#FFB4A1</color>
+    <color name="focinho_on_primaria_escuro">#5F1600</color>
+    <color name="focinho_primaria_container_escuro">#8A3A25</color>
+    <color name="focinho_on_primaria_container_escuro">#FFDBD1</color>
+    <color name="focinho_secundaria_escuro">#8FD5C3</color>
+    <color name="focinho_on_secundaria_escuro">#00382E</color>
+    <color name="focinho_secundaria_container_escuro">#1C5A4D</color>
+    <color name="focinho_on_secundaria_container_escuro">#B7EFDF</color>
+    <color name="focinho_fundo_escuro">#1A1110</color>
 </resources>

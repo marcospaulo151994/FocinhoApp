@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Espaçamentos padronizados, para o layout ficar consistente entre telas -->
+    <dimen name="margem_tela">24dp</dimen>
+    <dimen name="espaco_campos">12dp</dimen>
+    <dimen name="espaco_secao">24dp</dimen>
+    <dimen name="tamanho_avatar">52dp</dimen>
+</resources>
