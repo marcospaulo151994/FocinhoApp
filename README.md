@@ -93,6 +93,6 @@ As capturas ficam em [`docs/prints`](docs/prints) _(serão adicionadas ao final 
 ## Organização do Git
 
 - `main`: versão estável, usada na entrega.
-- `nome/funcionalidade`: uma branch por tarefa, com o nome de quem faz (ex.: `marcos/detalhe-pet`, `emerson/form-cuidado`).
+- `nome/funcionalidade`: uma branch por tarefa, com o nome de quem faz (ex.: `marcos/detalhe-pet`, `marcos/form-cuidado`).
 - Cada branch entra na `main` por Pull Request.
 - As primeiras funcionalidades usaram `feature/<nome>` (ex.: `feature/login`, `feature/crud-pets`), também mescladas na `main` por Pull Request.
