@@ -12,6 +12,7 @@ import br.upf.focinhoapp.databinding.ActivityMainBinding
 import br.upf.focinhoapp.ui.base.BaseActivity
 import br.upf.focinhoapp.ui.login.LoginActivity
 import br.upf.focinhoapp.ui.pets.PetAdapter
+import br.upf.focinhoapp.ui.pets.PetDetalheActivity
 import br.upf.focinhoapp.ui.pets.PetFormActivity
 import br.upf.focinhoapp.util.SessionManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -20,7 +21,7 @@ import kotlinx.coroutines.launch
 /**
  * Tela principal: lista os pets do usuário logado (o "R" do CRUD).
  *
- * - Toque num pet: abre o formulário em modo edição.
+ * - Toque num pet: abre o detalhe do pet (de lá é possível editar ou excluir).
  * - Botão "Novo pet": abre o formulário em modo cadastro.
  * - Menu "Sair": encerra a sessão e volta para o login.
  */
@@ -31,7 +32,7 @@ class MainActivity : BaseActivity() {
 
     /** Adapter da RecyclerView; recebe o que fazer quando um pet é tocado. */
     private val adapter = PetAdapter { pet ->
-        startActivity(PetFormActivity.criarIntent(this, pet.id))
+        startActivity(PetDetalheActivity.criarIntent(this, pet.id))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
