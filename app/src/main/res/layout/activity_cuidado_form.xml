@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Formulário de cuidado: serve para vacina, vermífugo e consulta.
+    Os rótulos que mudam conforme o tipo (título, data, próxima data e detalhe)
+    não têm "hint" aqui: são definidos no CuidadoFormActivity.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.cuidados.CuidadoFormActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margem_tela">
+
+            <!-- Título (obrigatório): nome da vacina, produto ou motivo da consulta -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:hint="@string/rotulo_nome_vacina">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campo_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Data (obrigatória): focusable=false impede o teclado; o toque abre um calendário -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_campos"
+                app:startIconDrawable="@drawable/ic_calendar"
+                tools:hint="@string/rotulo_data_aplicacao">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campo_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Próxima data (opcional): reforço, nova aplicação ou retorno -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_proxima_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_campos"
+                app:startIconDrawable="@drawable/ic_calendar"
+                tools:hint="@string/rotulo_proxima_dose">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campo_proxima_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Veterinário ou clínica (opcional) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_veterinario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_campos"
+                android:hint="@string/hint_veterinario">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campo_veterinario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Detalhe (opcional): lote da vacina, dose do vermífugo ou diagnóstico -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_detalhe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_campos"
+                tools:hint="@string/rotulo_lote">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campo_detalhe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Observações (opcional, várias linhas) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_observacoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_campos"
+                android:hint="@string/hint_observacoes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campo_observacoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botao_salvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_secao"
+                android:text="@string/salvar" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
