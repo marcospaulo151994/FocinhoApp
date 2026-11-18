@@ -67,6 +67,7 @@ Fluxo de dados: **Activity → Repository → DAO → Room (SQLite)**. As listas
 
 - E-mail em formato válido e único; senha com no mínimo 6 caracteres, salva como hash SHA-256.
 - Nome do pet com no mínimo 2 letras; espécie e sexo obrigatórios.
+- Raça escolhida numa lista conforme a espécie (cão ou gato); trocar a espécie limpa a raça.
 - Data de nascimento não pode ser no futuro; peso entre 0 e 150 kg (aceita vírgula ou ponto).
 - Excluir um pet apaga os registros de saúde dele (chave estrangeira com `CASCADE`), com confirmação antes.
 - Cuidado com próxima data: **atrasado** (já passou), **próximo** (até 7 dias) ou **em dia**.
