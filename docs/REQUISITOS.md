@@ -1,6 +1,6 @@
 # Requisitos do professor
 
-Atualizado em 18/11/2026. Resumo: 13 feitos, 1 falta.
+Atualizado em 18/11/2026. Resumo: 14 feitos, nenhum falta.
 
 Caminhos que começam com `ui/`, `data/` ou `util/` são relativos a
 `app/src/main/java/br/upf/focinhoapp/`.
@@ -19,5 +19,5 @@ Caminhos que começam com `ui/`, `data/` ou `util/` são relativos a
 | Persistência com Room | ✅ feito | `data/local/AppDatabase.kt`, `data/local/Converters.kt`, `data/dao/` |
 | CRUD | ✅ feito | Pets: `data/dao/PetDao.kt`, `ui/home/MainActivity.kt` (listar), `ui/pets/PetFormActivity.kt` (criar, editar, excluir). Cuidados: `data/dao/CuidadoDao.kt`, `ui/cuidados/CuidadoListFragment.kt` (listar), `ui/cuidados/CuidadoFormActivity.kt` (criar, editar, excluir) |
 | GitHub com histórico coerente e branches | ✅ feito | PRs #1 a #3 na `main` (`feature/estrutura-base`, `feature/login`, `feature/crud-pets`). Manter o fluxo nas próximas branches |
-| README completo | ⬜ falta | `README.md` existe; falta a versão final com os prints (Sprint 2) |
+| README completo | ✅ feito | `README.md`: proposta, tecnologias, arquitetura, telas, regras de negócio, instruções de execução e prints |
 | Arquivo com prints das telas | ✅ feito | `docs/prints/` (6 prints: login, cadastro, lista de pets, formulário de pet, detalhe com as abas, formulário de cuidado) |

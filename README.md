@@ -93,7 +93,15 @@ Testes unitários: botão direito em `app/src/test` → **Run Tests**.
 
 ## Prints das telas
 
-As capturas ficam em [`docs/prints`](docs/prints) _(serão adicionadas ao final do desenvolvimento)_.
+| Login | Criar conta | Lista de pets |
+|:---:|:---:|:---:|
+| <img src="docs/prints/01-login.png" alt="Tela de login" width="240"> | <img src="docs/prints/02-cadastro.png" alt="Tela de criação de conta" width="240"> | <img src="docs/prints/03-lista-pets.png" alt="Lista de pets do usuário" width="240"> |
+
+| Formulário de pet | Detalhe do pet | Formulário de cuidado |
+|:---:|:---:|:---:|
+| <img src="docs/prints/04-form-pet.png" alt="Formulário de pet com a raça escolhida na lista" width="240"> | <img src="docs/prints/05-detalhe-pet.png" alt="Detalhe do pet com as abas e as vacinas" width="240"> | <img src="docs/prints/06-form-cuidado.png" alt="Formulário de cuidado preenchido" width="240"> |
+
+As imagens em tamanho original ficam em [`docs/prints`](docs/prints). Os dados que aparecem nelas são de uma conta de demonstração.
 
 ## Organização do Git
 
