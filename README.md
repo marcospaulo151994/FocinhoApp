@@ -77,7 +77,7 @@ Todas as telas herdam de `BaseActivity`, que registra no Logcat cada chamada do 
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/<usuario>/FocinhoApp.git
+   git clone https://github.com/marcospaulo151994/FocinhoApp.git
    ```
 2. Abra a pasta no **Android Studio** (versão compatível com AGP 9.5) e aguarde o *Gradle Sync*.
 3. Selecione um emulador ou aparelho com Android 7.0 (API 24) ou superior.
@@ -93,5 +93,6 @@ As capturas ficam em [`docs/prints`](docs/prints) _(serão adicionadas ao final 
 ## Organização do Git
 
 - `main`: versão estável, usada na entrega.
-- `develop`: integração das funcionalidades.
-- `feature/<nome>`: uma branch por funcionalidade (ex.: `feature/login`, `feature/crud-pets`), mesclada em `develop` via Pull Request.
+- `nome/funcionalidade`: uma branch por tarefa, com o nome de quem faz (ex.: `marcos/detalhe-pet`, `emerson/form-cuidado`).
+- Cada branch entra na `main` por Pull Request.
+- As primeiras funcionalidades usaram `feature/<nome>` (ex.: `feature/login`, `feature/crud-pets`), também mescladas na `main` por Pull Request.
