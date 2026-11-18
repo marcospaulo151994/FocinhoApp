@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Conteúdo de uma aba do detalhe do pet: a lista de cuidados de um tipo.
+    Como na lista de pets, o FrameLayout sobrepõe a lista e o "estado vazio";
+    só um dos dois aparece.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cuidados.CuidadoListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_cuidados"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_cuidado" />
+
+    <!-- Estado vazio: aparece quando o pet ainda não tem registros deste tipo -->
+    <LinearLayout
+        android:id="@+id/grupo_vazio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_tela"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:text="@string/emoji_vazio_cuidados"
+            android:textSize="56sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/vazio_cuidados"
+            android:textAppearance="?attr/textAppearanceTitleMedium" />
+    </LinearLayout>
+</FrameLayout>

@@ -85,4 +85,13 @@
     <string name="rotulo_lote">Lote</string>
     <string name="rotulo_dose">Dose</string>
     <string name="rotulo_diagnostico">Diagnóstico</string>
+
+    <!-- Detalhe do pet: listas de cuidados -->
+    <string name="emoji_vazio_cuidados">📋</string>
+    <string name="vazio_cuidados">Nenhum registro por aqui ainda</string>
+    <!-- Ex.: "Próxima dose: 12/05/2027" (rótulo do tipo + data) -->
+    <string name="cuidado_proxima_data">%1$s: %2$s</string>
+    <string name="situacao_atrasado">Atrasado</string>
+    <string name="situacao_proximo">Próximo</string>
+    <string name="situacao_em_dia">Em dia</string>
 </resources>
