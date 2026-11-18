@@ -14,6 +14,6 @@ Ordem: primeiro o detalhe (as listas começam vazias), depois o formulário.
 
 ## Sprint 2 — Fechamento (23/11 e 24/11)
 
-- [ ] **Prints de todas as telas em `docs/prints`** · Marcos · `marcos/prints` · até 23/11 (seg) · Pronto quando: há um print de cada tela (login, cadastro, lista de pets, formulário de pet, detalhe com as abas, formulário de cuidado).
+- [x] **Prints de todas as telas em `docs/prints`** · Marcos · `marcos/prints` · até 23/11 (seg) · Pronto quando: há um print de cada tela (login, cadastro, lista de pets, formulário de pet, detalhe com as abas, formulário de cuidado).
 - [ ] **README final** · Marcos · `marcos/readme-final` · até 24/11 (ter) · Pronto quando: o README descreve as telas novas e mostra os prints.
 - [ ] **Revisar o código para a apresentação** · Marcos e Emerson · sem branch · 24/11 (ter) · Pronto quando: os dois conseguem explicar cada tela, o Fragment e o fluxo Activity → Repository → DAO.
