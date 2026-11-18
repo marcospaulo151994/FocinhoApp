@@ -76,10 +76,11 @@ class PetFormActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
-        // O adapter do dropdown é (re)definido no onResume porque, depois de uma
-        // rotação, o AutoCompleteTextView restaura o texto e filtra a lista,
-        // mostrando só a opção já escolhida. Recriar o adapter aqui evita isso.
+        // Os adapters dos dropdowns são (re)definidos no onResume porque, depois de
+        // uma rotação, o AutoCompleteTextView restaura o texto e filtra a lista,
+        // mostrando só a opção já escolhida. Recriar os adapters aqui evita isso.
         configurarDropdownEspecie()
+        configurarDropdownRaca()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -94,6 +95,13 @@ class PetFormActivity : BaseActivity() {
     private fun configurarCampos() = with(binding) {
         listOf(layoutNome, layoutEspecie, layoutNascimento, layoutPeso)
             .forEach { it.limparErroAoDigitar() }
+
+        // As raças dependem da espécie: ao trocar a espécie, a raça escolhida
+        // deixa de valer, então limpamos o campo e carregamos a lista nova.
+        campoEspecie.setOnItemClickListener { _, _, _, _ ->
+            campoRaca.setText("", false)
+            configurarDropdownRaca()
+        }
 
         grupoSexo.setOnCheckedChangeListener { _, _ -> textoErroSexo.isVisible = false }
 
@@ -112,6 +120,29 @@ class PetFormActivity : BaseActivity() {
         binding.campoEspecie.setAdapter(
             ArrayAdapter(this, android.R.layout.simple_list_item_1, opcoes)
         )
+    }
+
+    /** Espécie escolhida no dropdown, ou null se nada foi selecionado. */
+    private fun especieSelecionada(): Especie? {
+        val texto = binding.campoEspecie.text.toString()
+        return Especie.entries.firstOrNull { getString(it.rotulo) == texto }
+    }
+
+    /**
+     * Carrega no dropdown as raças da espécie escolhida. Só cão e gato têm
+     * lista; sem espécie ou com "Outro", o campo de raça fica desabilitado.
+     */
+    private fun configurarDropdownRaca() = with(binding) {
+        val racas: Array<String> = when (especieSelecionada()) {
+            Especie.CAO -> resources.getStringArray(R.array.racas_cao)
+            Especie.GATO -> resources.getStringArray(R.array.racas_gato)
+            Especie.OUTRO, null -> emptyArray()
+        }
+        campoRaca.setAdapter(
+            ArrayAdapter(this@PetFormActivity, android.R.layout.simple_list_item_1, racas)
+        )
+        layoutRaca.isEnabled = racas.isNotEmpty()
+        layoutRaca.helperText = if (racas.isEmpty()) getString(R.string.helper_raca) else null
     }
 
     // ------------------------------------------------------------------
@@ -135,7 +166,9 @@ class PetFormActivity : BaseActivity() {
         campoNome.setText(pet.nome)
         // O "false" evita que o dropdown abra/filtre ao definir o texto.
         campoEspecie.setText(getString(pet.especie.rotulo), false)
-        campoRaca.setText(pet.raca.orEmpty())
+        // A lista de raças depende da espécie que acabou de ser definida.
+        configurarDropdownRaca()
+        campoRaca.setText(pet.raca.orEmpty(), false)
         grupoSexo.check(
             when (pet.sexo) {
                 Sexo.MACHO -> R.id.radio_macho
@@ -185,8 +218,7 @@ class PetFormActivity : BaseActivity() {
         }
 
         // Espécie (obrigatória): converte o texto do dropdown de volta no enum
-        val textoEspecie = campoEspecie.text.toString()
-        val especie = Especie.entries.firstOrNull { getString(it.rotulo) == textoEspecie }
+        val especie = especieSelecionada()
         if (especie == null) {
             layoutEspecie.error = getString(R.string.erro_especie)
             valido = false

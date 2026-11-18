@@ -55,19 +55,20 @@
                     android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Raça (opcional) -->
+            <!-- Raça (opcional): lista suspensa com as raças da espécie escolhida -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layout_raca"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/espaco_campos"
                 android:hint="@string/hint_raca">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/campo_raca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textCapWords" />
+                    android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Sexo (obrigatório) -->

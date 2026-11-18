@@ -47,6 +47,7 @@
     <string name="hint_nome_pet">Nome do pet</string>
     <string name="hint_especie">Espécie</string>
     <string name="hint_raca">Raça (opcional)</string>
+    <string name="helper_raca">Disponível para cães e gatos</string>
     <string name="rotulo_sexo">Sexo</string>
     <string name="hint_nascimento">Data de nascimento (opcional)</string>
     <string name="hint_peso">Peso (opcional)</string>
@@ -69,6 +70,50 @@
     <string name="especie_outro">Outro</string>
     <string name="sexo_macho">Macho</string>
     <string name="sexo_femea">Fêmea</string>
+
+    <!-- Domínio: raças por espécie (opções do dropdown no formulário de pet) -->
+    <string-array name="racas_cao">
+        <item>Sem raça definida (SRD)</item>
+        <item>Beagle</item>
+        <item>Border Collie</item>
+        <item>Boxer</item>
+        <item>Bulldog Francês</item>
+        <item>Bulldog Inglês</item>
+        <item>Chihuahua</item>
+        <item>Cocker Spaniel</item>
+        <item>Dachshund (Salsicha)</item>
+        <item>Dálmata</item>
+        <item>Golden Retriever</item>
+        <item>Husky Siberiano</item>
+        <item>Labrador Retriever</item>
+        <item>Lhasa Apso</item>
+        <item>Maltês</item>
+        <item>Pastor Alemão</item>
+        <item>Pinscher</item>
+        <item>Pit Bull</item>
+        <item>Poodle</item>
+        <item>Pug</item>
+        <item>Rottweiler</item>
+        <item>Schnauzer</item>
+        <item>Shih Tzu</item>
+        <item>Spitz Alemão</item>
+        <item>Yorkshire Terrier</item>
+        <item>Outra</item>
+    </string-array>
+    <string-array name="racas_gato">
+        <item>Sem raça definida (SRD)</item>
+        <item>Angorá</item>
+        <item>Bengal</item>
+        <item>British Shorthair</item>
+        <item>Exótico</item>
+        <item>Himalaio</item>
+        <item>Maine Coon</item>
+        <item>Persa</item>
+        <item>Ragdoll</item>
+        <item>Siamês</item>
+        <item>Sphynx</item>
+        <item>Outra</item>
+    </string-array>
 
     <!-- Domínio: tipos de cuidado (usados a partir da etapa 2) -->
     <string name="tipo_vacina">Vacinas</string>
