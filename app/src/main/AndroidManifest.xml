@@ -40,6 +40,11 @@
             android:exported="false" />
 
         <activity
+            android:name=".ui.pets.PetDetalheActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.home.MainActivity" />
+
+        <activity
             android:name=".ui.pets.PetFormActivity"
             android:exported="false"
             android:parentActivityName=".ui.home.MainActivity"
