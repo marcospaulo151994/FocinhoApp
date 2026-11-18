@@ -7,8 +7,8 @@ Uma tarefa só conta como pronta com o Pull Request mesclado na `main`.
 
 ## Sprint 1 — Cuidados e Fragment (18/11 a 22/11)
 
-- [ ] **PetDetalheActivity com 3 abas + CuidadoListFragment** · Marcos · `marcos/detalhe-pet` · até 20/11 (sex) · Pronto quando: tocar num pet abre o detalhe e cada aba (Vacinas, Vermífugos, Consultas) lista os cuidados daquele tipo; editar o pet continua acessível.
-- [ ] **CuidadoFormActivity (criar, editar, excluir cuidado)** · Marcos · `marcos/form-cuidado` · até 22/11 (dom) · Pronto quando: dá para criar, editar e excluir um cuidado, com validação dos campos, a partir do botão "Novo" e do toque num item da lista.
+- [x] **PetDetalheActivity com 3 abas + CuidadoListFragment** · Marcos · `marcos/detalhe-pet` · até 20/11 (sex) · Pronto quando: tocar num pet abre o detalhe e cada aba (Vacinas, Vermífugos, Consultas) lista os cuidados daquele tipo; editar o pet continua acessível.
+- [x] **CuidadoFormActivity (criar, editar, excluir cuidado)** · Marcos · `marcos/form-cuidado` · até 22/11 (dom) · Pronto quando: dá para criar, editar e excluir um cuidado, com validação dos campos, a partir do botão "Novo" e do toque num item da lista.
 
 Ordem: primeiro o detalhe (as listas começam vazias), depois o formulário.
 

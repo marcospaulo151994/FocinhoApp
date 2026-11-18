@@ -16,12 +16,17 @@ import com.google.android.material.color.MaterialColors
 /**
  * Adapter da lista de cuidados (RecyclerView), no mesmo padrão do PetAdapter:
  * ListAdapter + DiffUtil só redesenham os itens que mudaram.
+ *
+ * @param aoClicar ação executada quando o usuário toca num registro.
  */
-class CuidadoAdapter : ListAdapter<Cuidado, CuidadoAdapter.CuidadoViewHolder>(DIFF) {
+class CuidadoAdapter(
+    private val aoClicar: (Cuidado) -> Unit
+) : ListAdapter<Cuidado, CuidadoAdapter.CuidadoViewHolder>(DIFF) {
 
     /** Guarda as views de um item da lista (layout item_cuidado.xml). */
     class CuidadoViewHolder(
-        private val binding: ItemCuidadoBinding
+        private val binding: ItemCuidadoBinding,
+        private val aoClicar: (Cuidado) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
         /** Preenche o item com os dados do [cuidado]. */
@@ -30,6 +35,7 @@ class CuidadoAdapter : ListAdapter<Cuidado, CuidadoAdapter.CuidadoViewHolder>(DI
 
             binding.textoTitulo.text = cuidado.titulo
             binding.textoData.text = DateUtils.formatar(cuidado.data)
+            binding.root.setOnClickListener { aoClicar(cuidado) }
 
             // A segunda linha só aparece quando há próxima data cadastrada.
             val proxima = cuidado.proximaData
@@ -67,7 +73,7 @@ class CuidadoAdapter : ListAdapter<Cuidado, CuidadoAdapter.CuidadoViewHolder>(DI
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CuidadoViewHolder {
         val binding = ItemCuidadoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return CuidadoViewHolder(binding)
+        return CuidadoViewHolder(binding, aoClicar)
     }
 
     override fun onBindViewHolder(holder: CuidadoViewHolder, position: Int) {

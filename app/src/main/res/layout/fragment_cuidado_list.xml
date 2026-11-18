@@ -2,7 +2,7 @@
 <!--
     Conteúdo de uma aba do detalhe do pet: a lista de cuidados de um tipo.
     Como na lista de pets, o FrameLayout sobrepõe a lista e o "estado vazio";
-    só um dos dois aparece.
+    só um dos dois aparece. O botão "Novo registro" fica por cima, no canto.
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,6 +11,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.cuidados.CuidadoListFragment">
 
+    <!-- paddingBottom grande para o último item não ficar atrás do botão -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_cuidados"
         android:layout_width="match_parent"
@@ -19,7 +20,7 @@
         android:paddingStart="16dp"
         android:paddingTop="8dp"
         android:paddingEnd="16dp"
-        android:paddingBottom="16dp"
+        android:paddingBottom="96dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_cuidado" />
 
@@ -49,5 +50,22 @@
             android:gravity="center"
             android:text="@string/vazio_cuidados"
             android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/vazio_cuidados_mensagem"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/botao_novo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="@string/novo_registro"
+        app:icon="@drawable/ic_add" />
 </FrameLayout>

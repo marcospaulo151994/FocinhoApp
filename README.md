@@ -15,7 +15,7 @@ Muitos tutores perdem a carteirinha de papel ou esquecem a data do próximo refo
 
 - **Conta do tutor:** cadastro e login (local, sem servidor). Cada usuário vê só os próprios pets.
 - **Pets:** cadastro com nome, espécie, raça, sexo, data de nascimento, peso e observações. A idade é calculada automaticamente.
-- **Cuidados de saúde** _(etapa 2)_: vacinas, vermífugos e consultas, com data da próxima dose/retorno e indicação de itens atrasados ou próximos do vencimento.
+- **Cuidados de saúde:** vacinas, vermífugos e consultas, com data da próxima dose/retorno e indicação de itens atrasados ou próximos do vencimento.
 
 ## Tecnologias utilizadas
 
@@ -47,7 +47,7 @@ br.upf.focinhoapp
 │   ├── login/                 # LoginActivity, CadastroUsuarioActivity
 │   ├── home/                  # MainActivity (lista de pets)
 │   ├── pets/                  # PetDetalheActivity (abas), PetFormActivity (CRUD) e PetAdapter
-│   └── cuidados/              # CuidadoListFragment (uma aba do detalhe) e CuidadoAdapter
+│   └── cuidados/              # CuidadoListFragment (uma aba do detalhe), CuidadoFormActivity (CRUD) e CuidadoAdapter
 └── util/                      # DateUtils, Validacoes, HashUtils, SessionManager
 ```
 
@@ -62,6 +62,7 @@ Fluxo de dados: **Activity → Repository → DAO → Room (SQLite)**. As listas
 | `MainActivity` | Lista de pets do usuário, estado vazio e logout |
 | `PetDetalheActivity` | Detalhe do pet com abas de vacinas, vermífugos e consultas. Cada aba é um `CuidadoListFragment` |
 | `PetFormActivity` | Cadastro, edição e exclusão de pet (CRUD) |
+| `CuidadoFormActivity` | Cadastro, edição e exclusão de vacina, vermífugo ou consulta (CRUD) |
 
 ### Regras de negócio implementadas
 
@@ -69,6 +70,7 @@ Fluxo de dados: **Activity → Repository → DAO → Room (SQLite)**. As listas
 - Nome do pet com no mínimo 2 letras; espécie e sexo obrigatórios.
 - Data de nascimento não pode ser no futuro; peso entre 0 e 150 kg (aceita vírgula ou ponto).
 - Excluir um pet apaga os registros de saúde dele (chave estrangeira com `CASCADE`), com confirmação antes.
+- Cuidado com título e data obrigatórios. Vacina e vermífugo não aceitam data no futuro; consulta aceita, para registrar uma consulta agendada. A próxima data precisa ser depois da data do cuidado.
 - Cuidado com próxima data: **atrasado** (já passou), **próximo** (até 7 dias) ou **em dia**.
 
 ### Ciclo de vida

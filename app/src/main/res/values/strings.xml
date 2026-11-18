@@ -94,4 +94,21 @@
     <string name="situacao_atrasado">Atrasado</string>
     <string name="situacao_proximo">Próximo</string>
     <string name="situacao_em_dia">Em dia</string>
+    <string name="vazio_cuidados_mensagem">Toque em \"Novo registro\" para cadastrar o primeiro.</string>
+    <string name="novo_registro">Novo registro</string>
+
+    <!-- Formulário de cuidado (vacina, vermífugo ou consulta) -->
+    <string name="titulo_novo_registro">Novo registro</string>
+    <string name="titulo_editar_registro">Editar registro</string>
+    <!-- Ex.: "Próxima dose (opcional)" (rótulo do tipo + aviso de opcional) -->
+    <string name="rotulo_opcional">%1$s (opcional)</string>
+    <string name="hint_veterinario">Veterinário ou clínica (opcional)</string>
+    <string name="erro_titulo_cuidado">Preencha este campo (mínimo 2 letras)</string>
+    <string name="erro_data_obrigatoria">Informe a data</string>
+    <string name="erro_proxima_data">A próxima data deve ser depois da data do registro</string>
+    <string name="erro_registro_nao_encontrado">Registro não encontrado</string>
+    <string name="msg_registro_salvo">Registro salvo com sucesso</string>
+    <string name="msg_registro_excluido">Registro removido</string>
+    <string name="titulo_excluir_registro">Excluir registro?</string>
+    <string name="msg_excluir_registro">O registro \"%1$s\" será apagado. Essa ação não pode ser desfeita.</string>
 </resources>

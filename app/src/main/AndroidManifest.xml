@@ -49,6 +49,12 @@
             android:exported="false"
             android:parentActivityName=".ui.home.MainActivity"
             android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.cuidados.CuidadoFormActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.pets.PetDetalheActivity"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

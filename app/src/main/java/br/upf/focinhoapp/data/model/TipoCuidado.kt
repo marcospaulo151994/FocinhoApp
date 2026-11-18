@@ -44,5 +44,13 @@ enum class TipoCuidado(
         R.string.rotulo_data_consulta,
         R.string.rotulo_retorno,
         R.string.rotulo_diagnostico
-    )
+    );
+
+    /**
+     * Regra de negócio: vacina e vermífugo são registros do que já foi
+     * aplicado, então a data não pode estar no futuro. Só a consulta pode,
+     * porque dá para registrar uma consulta agendada.
+     */
+    val permiteDataFutura: Boolean
+        get() = this == CONSULTA
 }
