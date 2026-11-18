@@ -46,7 +46,8 @@ br.upf.focinhoapp
 │   ├── base/                  # BaseActivity (ciclo de vida, toolbar) e extensões de formulário
 │   ├── login/                 # LoginActivity, CadastroUsuarioActivity
 │   ├── home/                  # MainActivity (lista de pets)
-│   └── pets/                  # PetFormActivity (CRUD) e PetAdapter
+│   ├── pets/                  # PetDetalheActivity (abas), PetFormActivity (CRUD) e PetAdapter
+│   └── cuidados/              # CuidadoListFragment (uma aba do detalhe) e CuidadoAdapter
 └── util/                      # DateUtils, Validacoes, HashUtils, SessionManager
 ```
 
@@ -59,6 +60,7 @@ Fluxo de dados: **Activity → Repository → DAO → Room (SQLite)**. As listas
 | `LoginActivity` | Login (tela inicial). Pula direto para a lista se já houver sessão |
 | `CadastroUsuarioActivity` | Criação de conta com validações |
 | `MainActivity` | Lista de pets do usuário, estado vazio e logout |
+| `PetDetalheActivity` | Detalhe do pet com abas de vacinas, vermífugos e consultas. Cada aba é um `CuidadoListFragment` |
 | `PetFormActivity` | Cadastro, edição e exclusão de pet (CRUD) |
 
 ### Regras de negócio implementadas
