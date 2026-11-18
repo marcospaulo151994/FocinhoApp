@@ -53,10 +53,22 @@ class CuidadoListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = CuidadoAdapter()
+        // Toque num registro: abre o formulário em modo edição.
+        val adapter = CuidadoAdapter { cuidado -> abrirFormulario(cuidado.id) }
         binding.listaCuidados.adapter = adapter
 
+        // Botão "Novo registro": abre o formulário em modo cadastro.
+        binding.botaoNovo.setOnClickListener { abrirFormulario(cuidadoId = null) }
+
         observarCuidados(adapter)
+    }
+
+    /**
+     * Abre o [CuidadoFormActivity] já com o pet e o tipo desta aba.
+     * @param cuidadoId registro a editar, ou null para cadastrar um novo.
+     */
+    private fun abrirFormulario(cuidadoId: Long?) {
+        startActivity(CuidadoFormActivity.criarIntent(requireContext(), petId, tipo, cuidadoId))
     }
 
     /**
